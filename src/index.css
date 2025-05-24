@@ -6,6 +6,28 @@
 }
 
 body{
-  width: 430px;
+  max-width: 430px;
+  height: auto;
 }
 
+.sidebar{
+    margin-top: 30px;
+}
+
+.bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.stick{
+    background-color: black;
+    width: 20px;
+    height: 2px;
+
+}
