@@ -1,17 +1,28 @@
+import { useState } from "react"
+
 export default function Sidebar(){
+
+      const [menuOpen, setMenuOpen] = useState(false);
+
+     const toggleMenu = () => {
+     setMenuOpen(!menuOpen);
+     };
+ 
     return(
         <section className="sidebar">
             <div className="bar">
 
-                <div className="btn-menu">
+                <button className={`btn-menu ${menuOpen ? 'open' : ''}`}
+                onClick={toggleMenu}
+                >
                     <div className="stick"></div>
                     <div className="stick"></div>
                     <div className="stick"></div>
-                </div>
+                </button>
 
-                <h1>LOGO</h1>
+                <img className="logo1" src="img/pet-logo.svg" alt="" />
 
-                <img src="" alt="logo.whatsapp" />
+                <img  className="logo2" src="img/whatsApp-Logo.svg" alt="logo.whatsapp" />
 
             </div>
         </section>
